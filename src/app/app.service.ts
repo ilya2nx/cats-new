@@ -71,12 +71,17 @@ export class AddCat {
   }
 
   remove(id: number) {
-    this.objs.map((el: any) => {
-      let index = this.objs.indexOf(el.id)
-      if (el.id === id) {
-        this.objs.splice(index, 1)
-        console.log('delete')
-      }
-    })
+    const index = this.objs.findIndex(cat => cat.id === id)
+    this.objs.splice(index, 1);
+    
+    
+    // this.objs.map((el: any) => {
+    // let index = this.objs.findIndex(cat => cat.id === id)
+    
+      
+    //   if (el.id === id) {
+    //     this.objs.splice(index, 1)
+    //   }
+    // })
   }
 }
