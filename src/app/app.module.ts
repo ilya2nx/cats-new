@@ -1,0 +1,26 @@
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+
+import { AppComponent } from './app.component';
+import { TileComponent } from './tile/tile.component';
+import { TableComponent } from './table/table.component';
+import { FormsModule } from '@angular/forms';
+import { AppRoutingModule } from './app-routing.module';
+import { NewCatComponent } from './new-cat/new-cat.component';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    TileComponent,
+    TableComponent,
+    NewCatComponent
+  ],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    AppRoutingModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
