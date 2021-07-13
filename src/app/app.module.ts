@@ -6,7 +6,6 @@ import { newCatComponent } from './new-cat/new-cat.component';
 import { UpdateCatComponent } from './update-cat/update-cat.component';
 import { CreateComponent } from './create/create.component';
 import { FormsModule } from '@angular/forms';
-import { MakerComponent } from './maker/maker.component';
 import { ListModule } from './list/list.module';
 import { SharedModule } from './shared/shared.module';
 
@@ -16,7 +15,6 @@ import { SharedModule } from './shared/shared.module';
     newCatComponent,
     UpdateCatComponent,
     CreateComponent,
-    MakerComponent,
   ],
   imports: [
     BrowserModule,
