@@ -6,7 +6,7 @@ import { Cat } from '../app.service';
   templateUrl: './new-cat.component.html',
   styleUrls: ['./new-cat.component.scss']
 })
-export class tempCatComponent implements OnInit {
+export class newCatComponent implements OnInit {
 
   constructor(public Cat: Cat) { }
 

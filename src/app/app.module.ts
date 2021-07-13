@@ -6,16 +6,20 @@ import { TileComponent } from './tile/tile.component';
 import { TableComponent } from './table/table.component';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
-import { tempCatComponent } from './new-cat/new-cat.component';
+import { newCatComponent } from './new-cat/new-cat.component';
 import { UpdateCatComponent } from './update-cat/update-cat.component';
+import { ListComponent } from './list/list.component';
+import { CreateComponent } from './create/create.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TileComponent,
     TableComponent,
-    tempCatComponent,
-    UpdateCatComponent
+    newCatComponent,
+    UpdateCatComponent,
+    ListComponent,
+    CreateComponent
   ],
   imports: [
     BrowserModule,
