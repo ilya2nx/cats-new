@@ -6,7 +6,7 @@ import { TileComponent } from './tile/tile.component';
 import { TableComponent } from './table/table.component';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
-import { NewCatComponent } from './new-cat/new-cat.component';
+import { tempCatComponent } from './new-cat/new-cat.component';
 import { UpdateCatComponent } from './update-cat/update-cat.component';
 
 @NgModule({
@@ -14,7 +14,7 @@ import { UpdateCatComponent } from './update-cat/update-cat.component';
     AppComponent,
     TileComponent,
     TableComponent,
-    NewCatComponent,
+    tempCatComponent,
     UpdateCatComponent
   ],
   imports: [

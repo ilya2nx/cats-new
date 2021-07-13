@@ -3,27 +3,27 @@
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Создать новую карточку</h5>
-        <button (click)="addCat.resetNewCat()" type="button" class="close" routerLink="/tile"></button>
+        <button (click)="Cat.resettempCat()" type="button" class="close" routerLink="/tile"></button>
       </div>
       <div class="modal-body">
         <div class="mb-3">
           <label for="image">Вставьте ссылку на картинку: </label>
-          <input (input)="addCat.onInput('image', $event)" [(ngModel)]="addCat.newCat.image" type="text" id="image">
+          <input (input)="Cat.onInput('image', $event)" [(ngModel)]="Cat.tempCat.image" type="text" id="image">
         </div>
-        <div *ngIf="addCat.warnings.image" class="warning">Поле должно быть заполено</div>
+        <div *ngIf="Cat.warnings.image" class="warning">Поле должно быть заполено</div>
         <div class="mb-3">
           <label for="name">Имя котика: </label>
-          <input (input)="addCat.onInput('name', $event)" [(ngModel)]="addCat.newCat.name" type="text" id="name">
+          <input (input)="Cat.onInput('name', $event)" [(ngModel)]="Cat.tempCat.name" type="text" id="name">
         </div>
-        <div *ngIf="addCat.warnings.name" class="warning">Поле должно быть заполено</div>
+        <div *ngIf="Cat.warnings.name" class="warning">Поле должно быть заполено</div>
         <div class="mb-3">
           <label for="description">Описание котика: </label>
-          <input (input)="addCat.onInput('description', $event)" [(ngModel)]="addCat.newCat.description" type="text" id="description">
+          <input (input)="Cat.onInput('description', $event)" [(ngModel)]="Cat.tempCat.description" type="text" id="description">
         </div>
-        <div *ngIf="addCat.warnings.description" class="warning">Поле должно быть заполено</div>
+        <div *ngIf="Cat.warnings.description" class="warning">Поле должно быть заполено</div>
       </div>
       <div class="modal-footer">
-        <button (click)="addCat.onAdd()" type="button" class="btn">Создать</button>
+        <button (click)="Cat.onAdd()" type="button" class="btn">Создать</button>
       </div>
     </div>
   </div>

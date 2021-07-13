@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AddCat } from '../app.service';
+import { Cat } from '../app.service';
 
 @Component({
   selector: 'app-tile',
@@ -8,14 +8,14 @@ import { AddCat } from '../app.service';
 })
 export class TileComponent implements OnInit {
 
-  constructor(public addCat: AddCat) { }
+  constructor(public Cat: Cat) { }
 
   ngOnInit(): void {
 
   }
 
   // foo(id: number) {
-  //   this.addCat.onLike(id)
+  //   this.Cat.onLike(id)
   // }
 
 }

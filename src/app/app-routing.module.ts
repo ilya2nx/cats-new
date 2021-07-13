@@ -1,6 +1,6 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
-import { NewCatComponent } from "./new-cat/new-cat.component";
+import { tempCatComponent } from "./new-cat/new-cat.component";
 import { TableComponent } from "./table/table.component";
 import { TileComponent } from "./tile/tile.component";
 import { UpdateCatComponent } from "./update-cat/update-cat.component";
@@ -8,7 +8,7 @@ import { UpdateCatComponent } from "./update-cat/update-cat.component";
 const routes: Routes = [
   {path:'tile', component: TileComponent},
   {path:'table', component: TableComponent},
-  {path: 'create', component: NewCatComponent},
+  {path: 'create', component: tempCatComponent},
   {path: 'update', component: UpdateCatComponent},
   {path: '**', redirectTo: '/tile'}
 

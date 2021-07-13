@@ -4,7 +4,7 @@ import { Injectable, ViewChild } from "@angular/core"
   providedIn: 'root'
 })
 
-export class AddCat {
+export class Cat {
 
   objs = [
     {image: 'http://html.ftpes.ru/FrontEndTest/Shironeko.jpg' , name: 'Shironeko', description: 'Самый счастливый и сонный кот в мире', id: 1, liked: false},
@@ -22,7 +22,7 @@ export class AddCat {
   ]
   toggle = false
   warnings: any = {}
-  newCat: any = {
+  tempCat: any = {
     name: '',
     image: '',
     description: '',
@@ -39,8 +39,8 @@ export class AddCat {
     })
   }
 
-  resetNewCat() {
-    this.newCat = {
+  resettempCat() {
+    this.tempCat = {
       name: '',
       image: '',
       description: '',
@@ -57,31 +57,35 @@ export class AddCat {
   onAdd() {
     const reqFields = ['name', 'image', 'description', ]
     let canPost = true
-    for (let field in this.newCat) {
-      if (reqFields.includes(field) && this.newCat[field].length === 0) {
+    for (let field in this.tempCat) {
+      if (reqFields.includes(field) && this.tempCat[field].length === 0) {
         this.warnings[field] = true
         canPost = false
       }
     }
-    if (canPost && Object.keys(this.newCat).length !== 0) {
-      this.newCat.id = this.objs.length + 1
-      this.objs.push(this.newCat)   
-      this.resetNewCat()
+    if (canPost && Object.keys(this.tempCat).length !== 0) {
+      this.tempCat.id = this.objs.length + 1
+      this.objs.push(this.tempCat)   
+      this.resettempCat()
     }
   }
 
   remove(id: number) {
-    const index = this.objs.findIndex(cat => cat.id === id)
-    this.objs.splice(index, 1);
+    const index = this.objs.findIndex(el => el.id === id)
+    this.objs.splice(index, 1)
   }
 
   setCurrentCat(id: number) {
-    this.newCat = this.objs.find(el => {return el.id === id})
+    this.tempCat = this.objs.find(el => {
+      return el.id === id
+    })
   }
-
+  
   onUpdate() {
     this.objs.forEach(el => {
-      if (el.id === this.newCat.id) { el === this.newCat}
+      if( el.id === this.tempCat.id ) {
+        el === this.tempCat
+      }
     })
   }
 }
