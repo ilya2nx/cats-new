@@ -18,7 +18,8 @@ import { ListComponent } from "./list.component";
     RouterModule.forChild([
       {path:'list', component: ListComponent, children: [
         {path:'tile', component: TileComponent},
-        {path:'table', component: TableComponent}
+        {path:'table', component: TableComponent},
+        {path: '**', redirectTo: '/list/tile'}
       ]},
     ])
   ],

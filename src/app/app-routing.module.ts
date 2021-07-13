@@ -1,14 +1,10 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { CreateComponent } from "./create/create.component";
-import { MakerComponent } from "./maker/maker.component";
 
 const routes: Routes = [ 
-  {path: 'create', component: CreateComponent, children: [
-    {path: 'maker', component: MakerComponent},
-  ]},
-  {path: 'maker/:id', component: MakerComponent},
-  {path: '**', redirectTo: '/list/tile'}
+  {path: 'create', component: CreateComponent}, 
+  {path: 'create/:id', component: CreateComponent},
 ]
 
 @NgModule({

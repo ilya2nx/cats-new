@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Cat } from '../app.service';
 
 @Component({
   selector: 'app-create',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateComponent implements OnInit {
 
-  constructor() { }
+  constructor(public Cat: Cat) { }
 
   ngOnInit(): void {
   }
