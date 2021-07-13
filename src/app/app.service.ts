@@ -55,7 +55,7 @@ export class AddCat {
   }
 
   onAdd() {
-    const reqFields = ['name', 'image', 'description']
+    const reqFields = ['name', 'image', 'description', ]
     let canPost = true
     for (let field in this.newCat) {
       if (reqFields.includes(field) && this.newCat[field].length === 0) {
@@ -65,7 +65,7 @@ export class AddCat {
     }
     if (canPost && Object.keys(this.newCat).length !== 0) {
       this.newCat.id = this.objs.length + 1
-      this.objs.push(this.newCat)
+      this.objs.push(this.newCat)   
       this.resetNewCat()
     }
   }
@@ -73,15 +73,15 @@ export class AddCat {
   remove(id: number) {
     const index = this.objs.findIndex(cat => cat.id === id)
     this.objs.splice(index, 1);
-    
-    
-    // this.objs.map((el: any) => {
-    // let index = this.objs.findIndex(cat => cat.id === id)
-    
-      
-    //   if (el.id === id) {
-    //     this.objs.splice(index, 1)
-    //   }
-    // })
+  }
+
+  setCurrentCat(id: number) {
+    this.newCat = this.objs.find(el => {return el.id === id})
+  }
+
+  onUpdate() {
+    this.objs.forEach(el => {
+      if (el.id === this.newCat.id) { el === this.newCat}
+    })
   }
 }

@@ -7,13 +7,15 @@ import { TableComponent } from './table/table.component';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { NewCatComponent } from './new-cat/new-cat.component';
+import { UpdateCatComponent } from './update-cat/update-cat.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TileComponent,
     TableComponent,
-    NewCatComponent
+    NewCatComponent,
+    UpdateCatComponent
   ],
   imports: [
     BrowserModule,
