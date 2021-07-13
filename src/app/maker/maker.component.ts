@@ -2,15 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { Cat } from '../app.service';
 
 @Component({
-  selector: 'app-list',
-  templateUrl: './list.component.html',
-  styleUrls: ['./list.component.scss']
+  selector: 'app-maker',
+  templateUrl: './maker.component.html',
+  styleUrls: ['./maker.component.scss']
 })
-export class ListComponent implements OnInit {
+export class MakerComponent implements OnInit {
 
   constructor(public Cat: Cat) { }
 
   ngOnInit(): void {
   }
-
 }
