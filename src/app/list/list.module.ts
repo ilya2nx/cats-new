@@ -19,8 +19,8 @@ import { ListComponent } from "./list.component";
       {path:'list', component: ListComponent, children: [
         {path:'tile', component: TileComponent},
         {path:'table', component: TableComponent},
-        {path: '**', redirectTo: '/list/tile'}
       ]},
+      {path: '**', redirectTo: '/list/tile'}
     ])
   ],
   exports: [

@@ -4,7 +4,7 @@
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel" *ngIf="!Cat.toggle">Создать новую карточку</h5>
         <h5 class="modal-title" id="exampleModalLabel" *ngIf="Cat.toggle">Редактировать карточку</h5>
-        <button (click)="Cat.resettempCat()" type="button" class="close" routerLink="/list"></button>
+        <button (click)="Cat.resettempCat()" type="button" class="close" [routerLink]="['/list', 'tile']"></button>
       </div>
       <div class="modal-body">
         <div class="mb-3">
@@ -25,7 +25,7 @@
       </div>
       <div class="modal-footer">
         <button (click)="Cat.onAdd()" type="button" class="btn" *ngIf="!Cat.toggle">Создать</button>
-        <button (click)="Cat.onUpdate()" type="button" class="btn" routerLink="/list" *ngIf="Cat.toggle">Редактировать</button>
+        <button (click)="Cat.onUpdate()" type="button" class="btn" [routerLink]="['/list', 'tile']" *ngIf="Cat.toggle">Редактировать</button>
       </div>
     </div>
   </div>
