@@ -6,7 +6,7 @@
         <p class="card__title">{{ cat.name }}</p>
         <p class="card__description">{{ cat.description }}</p>
         <button (click)="Cat.remove(cat.id)" class="delete-btn">Удалить</button>
-        <button (click)="Cat.setCurrentCat(cat.id)" [routerLink]="['/maker', cat.id]" class="update-btn" (click)="Cat.toggle = true">Редактировать</button>
+        <button (click)="Cat.setCurrentCat(cat.id)" [routerLink]="['/create', cat.id]" class="update-btn" (click)="Cat.toggle = true">Редактировать</button>
       </div>
       <div (click)="Cat.onLike(cat.id)" class="like-pos">
         <img *ngIf="cat.liked; else liked" class="like" src="http://html.ftpes.ru/FrontEndTest/favorite_full.svg" alt="">
