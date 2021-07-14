@@ -4,7 +4,6 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { newCatComponent } from './new-cat/new-cat.component';
 import { UpdateCatComponent } from './update-cat/update-cat.component';
-import { CreateComponent } from './create/create.component';
 import { FormsModule } from '@angular/forms';
 import { ListModule } from './list/list.module';
 import { SharedModule } from './shared/shared.module';
@@ -14,7 +13,6 @@ import { SharedModule } from './shared/shared.module';
     AppComponent,
     newCatComponent,
     UpdateCatComponent,
-    CreateComponent,
   ],
   imports: [
     BrowserModule,
